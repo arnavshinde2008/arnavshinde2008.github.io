@@ -225,6 +225,54 @@
 
         });
     </script>
+    <script>
+    const networkSelect = document.getElementById("networkSelect");
+    const downloadButton = document.getElementById("downloadButton");
+    const message = document.getElementById("message");
+
+    networkSelect.addEventListener("change", function () {
+        message.textContent = "";
+        message.className = "";
+
+        downloadButton.disabled = !networkSelect.value;
+    });
+
+    downloadButton.addEventListener("click", async function () {
+        const selectedFile = networkSelect.value;
+
+        if (!selectedFile) {
+            message.textContent = "Please select a network first.";
+            message.className = "error";
+            return;
+        }
+
+        const filePath = `./networks/${encodeURIComponent(selectedFile)}`;
+
+        try {
+            const response = await fetch(filePath, { method: "HEAD" });
+
+            if (!response.ok) {
+                throw new Error("File not found");
+            }
+
+            const downloadLink = document.createElement("a");
+            downloadLink.href = filePath;
+            downloadLink.download = selectedFile;
+
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            downloadLink.remove();
+
+            message.textContent = "Your download has started.";
+            message.className = "success";
+
+        } catch (error) {
+            message.textContent =
+                "The selected network file could not be found.";
+            message.className = "error";
+        }
+    });
+</script>
 
 </body>
 </html>
