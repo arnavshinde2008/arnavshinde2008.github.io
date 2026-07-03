@@ -1,0 +1,657 @@
+/* =========================================
+   RESET & BASE
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #175cd3;
+    --primary-dark: #1249aa;
+    --primary-light: #eff6ff;
+
+    --text-dark: #101828;
+    --text: #344054;
+    --text-light: #667085;
+
+    --border: #d0d5dd;
+    --border-light: #eaecf0;
+
+    --background: #f5f7fa;
+    --white: #ffffff;
+
+    --success: #067647;
+    --success-bg: #ecfdf3;
+
+    --error: #b42318;
+    --error-bg: #fef3f2;
+
+    --shadow:
+        0 4px 8px -2px rgba(16, 24, 40, 0.08),
+        0 12px 24px -4px rgba(16, 24, 40, 0.10);
+}
+
+
+html {
+    font-size: 16px;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(23, 92, 211, 0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #f8fafc 0%,
+            #eef4ff 100%
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 32px 20px;
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.container {
+    position: relative;
+
+    width: 100%;
+    max-width: 580px;
+
+    padding: 42px;
+
+    background:
+        rgba(255, 255, 255, 0.97);
+
+    border:
+        1px solid rgba(208, 213, 221, 0.7);
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+
+    animation:
+        cardEnter 0.45s ease-out;
+}
+
+
+/* Decorative top line */
+
+.container::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #175cd3,
+            #528bff,
+            #175cd3
+        );
+}
+
+
+@keyframes cardEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+h1 {
+    color: var(--text-dark);
+
+    font-size: 30px;
+    font-weight: 700;
+
+    letter-spacing: -0.6px;
+
+    text-align: center;
+
+    margin-bottom: 12px;
+}
+
+
+.description {
+    max-width: 440px;
+
+    margin:
+        0 auto
+        34px auto;
+
+    color: var(--text-light);
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   FORM GROUPS
+========================================= */
+
+.form-group {
+    position: relative;
+
+    margin-bottom: 26px;
+}
+
+
+label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--text-dark);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   SEARCH INPUT
+========================================= */
+
+.search-input {
+    width: 100%;
+
+    padding:
+        13px
+        15px
+        13px
+        42px;
+
+    color: var(--text-dark);
+
+    background-color: var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        10px 10px 0 0;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+/* Search icon */
+
+.form-group::after {
+    content: "⌕";
+
+    position: absolute;
+
+    top: 38px;
+    left: 15px;
+
+    color: #98a2b3;
+
+    font-size: 22px;
+
+    pointer-events: none;
+}
+
+
+.search-input::placeholder {
+    color: #98a2b3;
+}
+
+
+.search-input:hover {
+    border-color: #98a2b3;
+}
+
+
+.search-input:focus {
+    position: relative;
+    z-index: 2;
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(23, 92, 211, 0.10);
+}
+
+
+/* =========================================
+   SELECT DROPDOWN
+========================================= */
+
+select {
+    width: 100%;
+
+    padding:
+        13px
+        42px
+        13px
+        15px;
+
+    color: var(--text-dark);
+
+    background-color: #fafbfc;
+
+    border:
+        1px solid var(--border);
+
+    border-top: none;
+
+    border-radius:
+        0 0 10px 10px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    outline: none;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    background-image:
+
+        linear-gradient(
+            45deg,
+            transparent 50%,
+            #667085 50%
+        ),
+
+        linear-gradient(
+            135deg,
+            #667085 50%,
+            transparent 50%
+        );
+
+    background-position:
+
+        calc(100% - 20px) 19px,
+
+        calc(100% - 15px) 19px;
+
+    background-size:
+        5px 5px,
+        5px 5px;
+
+    background-repeat:
+        no-repeat;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+select:hover {
+    background-color: var(--white);
+
+    border-color: #98a2b3;
+}
+
+
+select:focus {
+    position: relative;
+    z-index: 2;
+
+    background-color: var(--white);
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(23, 92, 211, 0.10);
+}
+
+
+/* =========================================
+   SELECTED INFORMATION
+========================================= */
+
+.selected-info {
+    display: none;
+
+    margin-bottom: 22px;
+
+    padding: 16px 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8faff,
+            #f1f6ff
+        );
+
+    border:
+        1px solid #cdddfd;
+
+    border-radius: 10px;
+
+    animation:
+        infoEnter 0.25s ease-out;
+}
+
+
+@keyframes infoEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.selected-info p {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 6px;
+
+    color: var(--text);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+.selected-info p + p {
+    margin-top: 5px;
+}
+
+
+.selected-info strong {
+    min-width: 72px;
+
+    color: var(--text-dark);
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   DOWNLOAD BUTTON
+========================================= */
+
+button {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 50px;
+
+    padding: 14px 20px;
+
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            #246fe5
+        );
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    letter-spacing: 0.1px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 5px
+        rgba(23, 92, 211, 0.25);
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+}
+
+
+button:hover:not(:disabled) {
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-dark),
+            var(--primary)
+        );
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px
+        rgba(23, 92, 211, 0.30);
+}
+
+
+button:active:not(:disabled) {
+    transform: translateY(0);
+
+    box-shadow:
+        0 2px 4px
+        rgba(23, 92, 211, 0.20);
+}
+
+
+button:focus-visible {
+    outline:
+        3px solid
+        rgba(23, 92, 211, 0.25);
+
+    outline-offset: 3px;
+}
+
+
+button:disabled {
+    color: #f2f4f7;
+
+    background: #98a2b3;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+
+    opacity: 0.75;
+}
+
+
+/* =========================================
+   STATUS MESSAGE
+========================================= */
+
+#message {
+    min-height: 20px;
+
+    margin-top: 16px;
+
+    padding: 0 4px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+
+#message.success,
+.success {
+    color: var(--success);
+}
+
+
+#message.error,
+.error {
+    color: var(--error);
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        align-items: flex-start;
+
+        padding:
+            20px
+            14px;
+    }
+
+
+    .container {
+        padding:
+            32px
+            22px;
+
+        border-radius: 16px;
+    }
+
+
+    h1 {
+        font-size: 25px;
+
+        letter-spacing: -0.4px;
+    }
+
+
+    .description {
+        margin-bottom: 28px;
+
+        font-size: 14px;
+    }
+
+
+    .form-group {
+        margin-bottom: 22px;
+    }
+
+
+    .search-input,
+    select {
+        font-size: 16px;
+    }
+
+
+    button {
+        min-height: 52px;
+
+        font-size: 16px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL SCREENS
+========================================= */
+
+@media (max-width: 360px) {
+
+    .container {
+        padding:
+            28px
+            17px;
+    }
+
+
+    h1 {
+        font-size: 22px;
+    }
+
+
+    .selected-info p {
+        display: block;
+    }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}
