@@ -1,278 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Network Provider List Download</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Insurance Network Provider List</title>
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+
         body {
             font-family: Arial, sans-serif;
-            background: #f4f7fb;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eef4ff,
+                    #f8fafc
+                );
+
             min-height: 100vh;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             padding: 20px;
         }
 
+
         .container {
             width: 100%;
-            max-width: 500px;
+            max-width: 550px;
+
             background: white;
+
             padding: 35px;
-            border-radius: 14px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 10px 35px
+                rgba(0, 0, 0, 0.10);
         }
+
 
         h1 {
             text-align: center;
-            margin-bottom: 10px;
+
             color: #1f2937;
+
+            margin-bottom: 10px;
+
+            font-size: 28px;
         }
+
 
         .description {
             text-align: center;
+
             color: #6b7280;
+
+            line-height: 1.6;
+
             margin-bottom: 30px;
-            line-height: 1.5;
         }
+
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
 
         label {
             display: block;
+
+            font-size: 15px;
             font-weight: bold;
-            margin-bottom: 8px;
+
             color: #374151;
+
+            margin-bottom: 8px;
         }
 
-        select {
+
+        .search-input {
             width: 100%;
-            padding: 14px;
+
+            padding: 13px 14px;
+
             border: 1px solid #d1d5db;
-            border-radius: 8px;
-            font-size: 16px;
-            background: white;
-            margin-bottom: 20px;
-            cursor: pointer;
+
+            border-radius: 8px 8px 0 0;
+
+            font-size: 15px;
+
+            outline: none;
         }
 
-        select:focus {
-            outline: none;
+
+        .search-input:focus {
             border-color: #2563eb;
         }
 
-        button {
+
+        select {
             width: 100%;
-            padding: 14px;
-            border: none;
-            border-radius: 8px;
-            background: #2563eb;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
+
+            padding: 13px 14px;
+
+            border: 1px solid #d1d5db;
+            border-top: none;
+
+            border-radius: 0 0 8px 8px;
+
+            background: white;
+
+            font-size: 15px;
+
             cursor: pointer;
-            transition: 0.2s;
+
+            outline: none;
         }
 
-        button:hover {
+
+        select:focus {
+            border-color: #2563eb;
+        }
+
+
+        .selected-info {
+            background: #f8fafc;
+
+            border: 1px solid #e5e7eb;
+
+            border-radius: 8px;
+
+            padding: 14px;
+
+            margin-bottom: 20px;
+
+            display: none;
+        }
+
+
+        .selected-info p {
+            color: #4b5563;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        .selected-info strong {
+            color: #1f2937;
+        }
+
+
+        button {
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #2563eb;
+
+            color: white;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition:
+                background 0.2s,
+                transform 0.1s;
+        }
+
+
+        button:hover:not(:disabled) {
             background: #1d4ed8;
         }
 
+
+        button:active:not(:disabled) {
+            transform: scale(0.99);
+        }
+
+
         button:disabled {
             background: #9ca3af;
+
             cursor: not-allowed;
         }
 
+
         #message {
             text-align: center;
+
             margin-top: 18px;
-            font-size: 14px;
+
             min-height: 20px;
+
+            font-size: 14px;
         }
+
 
         .success {
             color: #15803d;
         }
 
+
         .error {
             color: #dc2626;
         }
 
+
         @media (max-width: 600px) {
+
             .container {
                 padding: 25px 20px;
             }
 
+
             h1 {
-                font-size: 24px;
+                font-size: 23px;
             }
+
+
+            .description {
+                font-size: 14px;
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <div class="container">
 
-        <h1>Provider Network List</h1>
+    <main class="container">
+
+
+        <h1>
+            Provider Network List
+        </h1>
+
 
         <p class="description">
-            Select your insured network below to download the corresponding
-            provider network list.
+
+            Select your insurance company and network
+            to download the corresponding provider list.
+
         </p>
 
-        <label for="networkSelect">Select Network</label>
 
-        <select id="networkSelect">
-            <option value="">-- Select your network --</option>
 
-            <option value="GN-PLUS.xlsx">GN PLUS</option>
-            <option value="GN.xlsx">GN</option>
-            <option value="RNE.xlsx">RNE</option>
-            <option value="RN.xlsx">RN</option>
-            <option value="RN2.xlsx">RN2</option>
-            <option value="RN3.xlsx">RN3</option>
-            <option value="PCP.xlsx">PCP</option>
-            <option value="PCP-C.xlsx">PCP-C</option>
-            <option value="PCP-AUH.xlsx">PCP-AUH</option>
-            <option value="PCP-DENTAL.xlsx">PCP DENTAL</option>
-            <option value="SEHA-PROVIDERS.xlsx">SEHA PROVIDERS</option>
-            <option value="TPA-PHM.xlsx">TPA-PHM</option>
-            <option value="REGIONAL.xlsx">REGIONAL</option>
-            <option value="ADNIC-NETWORK-ONLY.xlsx">
-                ADNIC NETWORK ONLY
-            </option>
-        </select>
+        <!-- INSURANCE COMPANY -->
 
-        <button id="downloadButton" disabled>
+
+        <div class="form-group">
+
+
+            <label for="companySearch">
+
+                Insurance Company
+
+            </label>
+
+
+            <input
+                type="text"
+                id="companySearch"
+                class="search-input"
+                placeholder="Search insurance company..."
+                autocomplete="off"
+            >
+
+
+            <select id="companySelect">
+
+
+                <option value="">
+
+                    -- Select insurance company --
+
+                </option>
+
+
+            </select>
+
+
+        </div>
+
+
+
+        <!-- NETWORK -->
+
+
+        <div class="form-group">
+
+
+            <label for="networkSearch">
+
+                Insurance Network
+
+            </label>
+
+
+            <input
+                type="text"
+                id="networkSearch"
+                class="search-input"
+                placeholder="Search network..."
+                autocomplete="off"
+            >
+
+
+            <select id="networkSelect">
+
+
+                <option value="">
+
+                    -- Select network --
+
+                </option>
+
+
+            </select>
+
+
+        </div>
+
+
+
+        <!-- SELECTED INFORMATION -->
+
+
+        <div
+            class="selected-info"
+            id="selectedInfo"
+        >
+
+
+            <p>
+
+                <strong>Company:</strong>
+
+                <span id="selectedCompany">
+                    -
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <strong>Network:</strong>
+
+                <span id="selectedNetwork">
+                    -
+                </span>
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- DOWNLOAD BUTTON -->
+
+
+        <button
+            id="downloadButton"
+            disabled
+        >
+
             Download Network File
+
         </button>
+
 
         <p id="message"></p>
 
-    </div>
+
+    </main>
 
 
-    <script>
-        const networkSelect =
-            document.getElementById("networkSelect");
 
-        const downloadButton =
-            document.getElementById("downloadButton");
+    <script src="script.js"></script>
 
-        const message =
-            document.getElementById("message");
-
-
-        networkSelect.addEventListener("change", function () {
-
-            message.textContent = "";
-            message.className = "";
-
-            if (networkSelect.value !== "") {
-                downloadButton.disabled = false;
-            } else {
-                downloadButton.disabled = true;
-            }
-
-        });
-
-
-        downloadButton.addEventListener("click", function () {
-
-            const selectedFile = networkSelect.value;
-
-            if (!selectedFile) {
-
-                message.textContent =
-                    "Please select a network first.";
-
-                message.className = "error";
-
-                return;
-            }
-
-
-            const filePath =
-                "networks/" + selectedFile;
-
-
-            const downloadLink =
-                document.createElement("a");
-
-            downloadLink.href = filePath;
-
-            downloadLink.download = selectedFile;
-
-            document.body.appendChild(downloadLink);
-
-            downloadLink.click();
-
-            document.body.removeChild(downloadLink);
-
-
-            message.textContent =
-                "Your download has started.";
-
-            message.className = "success";
-
-        });
-    </script>
-    <script>
-    const networkSelect = document.getElementById("networkSelect");
-    const downloadButton = document.getElementById("downloadButton");
-    const message = document.getElementById("message");
-
-    networkSelect.addEventListener("change", function () {
-        message.textContent = "";
-        message.className = "";
-
-        downloadButton.disabled = !networkSelect.value;
-    });
-
-    downloadButton.addEventListener("click", async function () {
-        const selectedFile = networkSelect.value;
-
-        if (!selectedFile) {
-            message.textContent = "Please select a network first.";
-            message.className = "error";
-            return;
-        }
-
-        const filePath = `./networks/${encodeURIComponent(selectedFile)}`;
-
-        try {
-            const response = await fetch(filePath, { method: "HEAD" });
-
-            if (!response.ok) {
-                throw new Error("File not found");
-            }
-
-            const downloadLink = document.createElement("a");
-            downloadLink.href = filePath;
-            downloadLink.download = selectedFile;
-
-            document.body.appendChild(downloadLink);
-            downloadLink.click();
-            downloadLink.remove();
-
-            message.textContent = "Your download has started.";
-            message.className = "success";
-
-        } catch (error) {
-            message.textContent =
-                "The selected network file could not be found.";
-            message.className = "error";
-        }
-    });
-</script>
 
 </body>
+
 </html>
