@@ -15,7 +15,7 @@ const insuranceCompanies = [
     },
 
     {
-        name: "Sukoon Insurance (formerly Oman Insurance)",
+        name: "Sukoon Insurance (formerly Oman Insurance Company)",
         value: "sukoon"
     },
 
@@ -30,22 +30,216 @@ const insuranceCompanies = [
     },
 
     {
-        name: "National General Insurance (NGI)",
+        name: "National General Insurance Company (NGI)",
         value: "ngi"
     },
 
     {
-        name: "Al Ain Ahlia Insurance",
+        name: "Al Ain Ahlia Insurance Company",
         value: "al-ain-ahlia"
     },
 
     {
         name: "Emirates Insurance Company",
         value: "emirates-insurance"
+    },
+
+    {
+        name: "Abu Dhabi National Takaful Company (Takaful)",
+        value: "abu-dhabi-national-takaful"
+    },
+
+    {
+        name: "Al Buhaira National Insurance Company",
+        value: "al-buhaira"
+    },
+
+    {
+        name: "Al Dhafra Insurance Company",
+        value: "al-dhafra"
+    },
+
+    {
+        name: "Al Fujairah National Insurance Company",
+        value: "al-fujairah-national"
+    },
+
+    {
+        name: "Al Sagr National Insurance Company",
+        value: "al-sagr"
+    },
+
+    {
+        name: "Al Wathba National Insurance Company",
+        value: "al-wathba"
+    },
+
+    {
+        name: "Aman (Dubai Islamic Insurance & Reinsurance Company)",
+        value: "aman"
+    },
+
+    {
+        name: "Fujairah National Insurance Company",
+        value: "fujairah-national"
+    },
+
+    {
+        name: "Methaq Takaful Insurance",
+        value: "methaq-takaful"
+    },
+
+    {
+        name: "National Life & General Insurance (UAE Branch)",
+        value: "nlgic-uae"
+    },
+
+    {
+        name: "Noor Takaful (now part of Sukoon Takaful)",
+        value: "noor-takaful"
+    },
+
+    {
+        name: "Orient Takaful",
+        value: "orient-takaful"
+    },
+
+    {
+        name: "Qatar Islamic Insurance Company (UAE Branch)",
+        value: "qatar-islamic-insurance"
+    },
+
+    {
+        name: "Salama (Islamic Arab Insurance Company)",
+        value: "salama"
+    },
+
+    {
+        name: "Sukoon Takaful",
+        value: "sukoon-takaful"
+    },
+
+    {
+        name: "Takaful Emarat",
+        value: "takaful-emarat"
+    },
+
+    {
+        name: "Union Insurance Company",
+        value: "union-insurance"
+    },
+
+    {
+        name: "United Fidelity Insurance Company",
+        value: "united-fidelity"
+    },
+
+    {
+        name: "Watania Takaful General",
+        value: "watania-general"
+    },
+
+    {
+        name: "Watania Takaful Family",
+        value: "watania-family"
+    },
+
+    {
+        name: "Yas Takaful",
+        value: "yas-takaful"
+    },
+
+    {
+        name: "Adamjee Insurance Company",
+        value: "adamjee"
+    },
+
+    {
+        name: "AIG (American International Group)",
+        value: "aig"
+    },
+
+    {
+        name: "Allianz",
+        value: "allianz"
+    },
+
+    {
+        name: "Arabia Insurance Company",
+        value: "arabia-insurance"
+    },
+
+    {
+        name: "AXA Gulf (now integrated with GIG Gulf)",
+        value: "axa-gulf"
+    },
+
+    {
+        name: "CHUBB Insurance",
+        value: "chubb"
+    },
+
+    {
+        name: "Cigna Insurance",
+        value: "cigna-insurance"
+    },
+
+    {
+        name: "GIG Gulf (formerly AXA Gulf)",
+        value: "gig-gulf"
+    },
+
+    {
+        name: "MetLife",
+        value: "metlife"
+    },
+
+    {
+        name: "Qatar Insurance Company (QIC)",
+        value: "qic"
+    },
+
+    {
+        name: "Tokio Marine",
+        value: "tokio-marine"
+    },
+
+    {
+        name: "Zurich Insurance",
+        value: "zurich"
+    },
+
+    {
+        name: "Daman (National Health Insurance Company)",
+        value: "daman"
+    },
+
+    {
+        name: "NAS Neuron",
+        value: "nas-neuron-company"
+    },
+
+    {
+        name: "NextCare",
+        value: "nextcare-company"
+    },
+
+    {
+        name: "Cigna Healthcare",
+        value: "cigna-healthcare"
+    },
+
+    {
+        name: "Bupa Global",
+        value: "bupa-global"
+    },
+
+    {
+        name: "Allianz Care",
+        value: "allianz-care"
     }
 
 ];
-
 
 // =====================================================
 // TPA DATA
