@@ -240,6 +240,7 @@ const insuranceCompanies = [
     }
 
 ];
+insuranceCompanies.sort();
 
 // =====================================================
 // TPA DATA
@@ -282,6 +283,7 @@ const tpas = [
 }
 
 ];
+ tpas.sort();
 
 
 
