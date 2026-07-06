@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -11,300 +12,361 @@
 
     <meta
         name="description"
-        content="Download insurance provider network lists."
+        content="Select an insurance company, TPA, and network to download the corresponding provider network list."
     >
 
     <title>Provider Network List</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
 
 
 <body>
 
+
     <main class="container">
 
 
-        <!-- =====================================
+        <!-- =====================================================
              HEADER
-        ====================================== -->
+        ====================================================== -->
 
         <header class="page-header">
 
-            <h1>Provider Network List</h1>
+            <h1>
+                Provider Network List
+            </h1>
 
             <p class="description">
-                Select your insurance company and network to download
-                the corresponding provider list.
+                Select your insurance company, TPA, and network
+                to download the corresponding provider list.
             </p>
 
         </header>
 
 
 
-        <!-- =====================================
-             INSURANCE COMPANY DROPDOWN
-        ====================================== -->
+        <!-- =====================================================
+             RESPONSIVE SELECTION GRID
+        ====================================================== -->
 
-        <div class="form-group">
-
-            <label for="companyButton">
-                Insurance Company
-            </label>
+        <section class="selection-grid">
 
 
-            <div
-                class="custom-dropdown"
-                id="companyDropdown"
-            >
+            <!-- =================================================
+                 INSURANCE COMPANY
+            ================================================== -->
 
+            <div class="form-group">
 
-                <!-- Dropdown Button -->
+                <label for="companyButton">
+                    Insurance Company
+                </label>
 
-                <button
-                    type="button"
-                    class="dropdown-button"
-                    id="companyButton"
-                    aria-haspopup="listbox"
-                    aria-expanded="false"
-                >
-
-                    <span>
-                        Select insurance company
-                    </span>
-
-                    <span
-                        class="arrow"
-                        aria-hidden="true"
-                    >
-                        ⌄
-                    </span>
-
-                </button>
-
-
-
-                <!-- Dropdown Menu -->
 
                 <div
-                    class="dropdown-menu"
-                    role="listbox"
+                    class="custom-dropdown"
+                    id="companyDropdown"
                 >
 
 
-                    <!-- Search -->
+                    <button
+                        type="button"
+                        class="dropdown-button"
+                        id="companyButton"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                    >
 
-                    <div class="dropdown-search-box">
-
-                        <span
-                            class="search-icon"
-                            aria-hidden="true"
-                        >
-                            ⌕
+                        <span>
+                            Select insurance company
                         </span>
 
-
-                        <input
-                            type="text"
-                            id="companySearch"
-                            placeholder="Search insurance company..."
-                            autocomplete="off"
-                            aria-label="Search insurance companies"
+                        <span
+                            class="arrow"
+                            aria-hidden="true"
                         >
+                            ⌄
+                        </span>
 
-                    </div>
+                    </button>
 
 
-
-                    <!-- Company Options -->
 
                     <div
-                        class="dropdown-options"
-                        id="companyOptions"
+                        class="dropdown-menu"
+                        role="listbox"
                     >
-                    </div>
 
+
+                        <div class="dropdown-search-box">
+
+                            <span
+                                class="search-icon"
+                                aria-hidden="true"
+                            >
+                                ⌕
+                            </span>
+
+
+                            <input
+                                type="text"
+                                id="companySearch"
+                                placeholder="Search insurance company..."
+                                autocomplete="off"
+                                aria-label="Search insurance companies"
+                            >
+
+                        </div>
+
+
+
+                        <div
+                            class="dropdown-options"
+                            id="companyOptions"
+                        >
+                        </div>
+
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
-        <!-- TPA -->
-
-<div class="form-group">
-    <label>TPA</label>
-
-    <div class="custom-dropdown" id="tpaDropdown">
-
-        <button
-            type="button"
-            class="dropdown-button"
-            id="tpaButton"
-        >
-            <span>Select TPA</span>
-            <span class="arrow">⌄</span>
-        </button>
-
-        <div class="dropdown-menu">
-
-            <div class="dropdown-search-box">
-
-                <span class="search-icon">⌕</span>
-
-                <input
-                    type="text"
-                    id="tpaSearch"
-                    placeholder="Search TPA..."
-                    autocomplete="off"
-                >
-
-            </div>
-
-            <div
-                class="dropdown-options"
-                id="tpaOptions"
-            ></div>
-
-        </div>
-
-    </div>
-</div>
 
 
+            <!-- =================================================
+                 TPA
+            ================================================== -->
 
-        <!-- =====================================
-             INSURANCE NETWORK DROPDOWN
-        ====================================== -->
+            <div class="form-group">
 
-        <div class="form-group">
+                <label for="tpaButton">
+                    TPA
+                </label>
 
-            <label for="networkButton">
-                Insurance Network
-            </label>
-
-
-            <div
-                class="custom-dropdown"
-                id="networkDropdown"
-            >
-
-
-                <!-- Dropdown Button -->
-
-                <button
-                    type="button"
-                    class="dropdown-button"
-                    id="networkButton"
-                    aria-haspopup="listbox"
-                    aria-expanded="false"
-                >
-
-                    <span>
-                        Select network
-                    </span>
-
-                    <span
-                        class="arrow"
-                        aria-hidden="true"
-                    >
-                        ⌄
-                    </span>
-
-                </button>
-
-
-
-                <!-- Dropdown Menu -->
 
                 <div
-                    class="dropdown-menu"
-                    role="listbox"
+                    class="custom-dropdown"
+                    id="tpaDropdown"
                 >
 
 
-                    <!-- Search -->
+                    <button
+                        type="button"
+                        class="dropdown-button"
+                        id="tpaButton"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                    >
 
-                    <div class="dropdown-search-box">
-
-                        <span
-                            class="search-icon"
-                            aria-hidden="true"
-                        >
-                            ⌕
+                        <span>
+                            Select TPA
                         </span>
 
-
-                        <input
-                            type="text"
-                            id="networkSearch"
-                            placeholder="Search network..."
-                            autocomplete="off"
-                            aria-label="Search insurance networks"
+                        <span
+                            class="arrow"
+                            aria-hidden="true"
                         >
+                            ⌄
+                        </span>
 
-                    </div>
+                    </button>
 
 
-
-                    <!-- Network Options -->
 
                     <div
-                        class="dropdown-options"
-                        id="networkOptions"
+                        class="dropdown-menu"
+                        role="listbox"
                     >
-                    </div>
 
+
+                        <div class="dropdown-search-box">
+
+                            <span
+                                class="search-icon"
+                                aria-hidden="true"
+                            >
+                                ⌕
+                            </span>
+
+
+                            <input
+                                type="text"
+                                id="tpaSearch"
+                                placeholder="Search TPA..."
+                                autocomplete="off"
+                                aria-label="Search TPAs"
+                            >
+
+                        </div>
+
+
+
+                        <div
+                            class="dropdown-options"
+                            id="tpaOptions"
+                        >
+                        </div>
+
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
+
+
+            <!-- =================================================
+                 INSURANCE NETWORK
+            ================================================== -->
+
+            <div class="form-group">
+
+                <label for="networkButton">
+                    Insurance Network
+                </label>
+
+
+                <div
+                    class="custom-dropdown"
+                    id="networkDropdown"
+                >
+
+
+                    <button
+                        type="button"
+                        class="dropdown-button"
+                        id="networkButton"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                    >
+
+                        <span>
+                            Select network
+                        </span>
+
+                        <span
+                            class="arrow"
+                            aria-hidden="true"
+                        >
+                            ⌄
+                        </span>
+
+                    </button>
 
 
 
-        <!-- =====================================
+                    <div
+                        class="dropdown-menu"
+                        role="listbox"
+                    >
+
+
+                        <div class="dropdown-search-box">
+
+                            <span
+                                class="search-icon"
+                                aria-hidden="true"
+                            >
+                                ⌕
+                            </span>
+
+
+                            <input
+                                type="text"
+                                id="networkSearch"
+                                placeholder="Search network..."
+                                autocomplete="off"
+                                aria-label="Search insurance networks"
+                            >
+
+                        </div>
+
+
+
+                        <div
+                            class="dropdown-options"
+                            id="networkOptions"
+                        >
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
              SELECTED INFORMATION
-        ====================================== -->
-<div
-    class="selected-info"
-    id="selectedInfo"
->
+        ====================================================== -->
 
-    <p>
-        <strong>Company:</strong>
-
-        <span id="selectedCompany">
-            -
-        </span>
-    </p>
+        <div
+            class="selected-info"
+            id="selectedInfo"
+        >
 
 
-    <p>
-        <strong>TPA:</strong>
+            <p>
 
-        <span id="selectedTpa">
-            -
-        </span>
-    </p>
+                <strong>
+                    Company:
+                </strong>
 
+                <span id="selectedCompany">
+                    -
+                </span>
 
-    <p>
-        <strong>Network:</strong>
-
-        <span id="selectedNetwork">
-            -
-        </span>
-    </p>
-
-</div>
+            </p>
 
 
-        <!-- =====================================
+
+            <p>
+
+                <strong>
+                    TPA:
+                </strong>
+
+                <span id="selectedTpa">
+                    -
+                </span>
+
+            </p>
+
+
+
+            <p>
+
+                <strong>
+                    Network:
+                </strong>
+
+                <span id="selectedNetwork">
+                    -
+                </span>
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- =====================================================
              DOWNLOAD BUTTON
-        ====================================== -->
+        ====================================================== -->
 
         <button
             type="button"
@@ -319,9 +381,9 @@
 
 
 
-        <!-- =====================================
+        <!-- =====================================================
              STATUS MESSAGE
-        ====================================== -->
+        ====================================================== -->
 
         <p
             id="message"
@@ -335,9 +397,12 @@
 
 
 
-    <!-- External JavaScript -->
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
     <script src="script.js"></script>
+
 
 </body>
 
