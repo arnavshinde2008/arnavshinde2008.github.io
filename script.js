@@ -82,8 +82,14 @@ const tpas = [
         name: "E-Care",
         value: "e-care"
     }
+    {
+    name: "Al Madallah Healthcare Management",
+    value: "al-madallah"
+}
 
 ];
+
+
 
 // =====================================================
 // NETWORK DATA
@@ -91,77 +97,273 @@ const tpas = [
 
 const networks = [
 
+    
+// =====================================================
+// NEXTCARE NETWORKS
+// =====================================================
+
+{
+    name: "GN+",
+    file: "NEXTCARE - GN+.xlsx",
+    tpa: "nextcare"
+},
+
+{
+    name: "GN",
+    file: "NEXTCARE - GN.xlsx",
+    tpa: "nextcare"
+},
+
+{
+    name: "GN Excluding Mediclinic, Al Zahra & Sulaiman Al Habib Group",
+    file: "NEXTCARE - GN EXCLUDING MEDICLINIC ,AL ZAHRA,SULAIMAN AL HABIB GROUP.xlsx",
+    tpa: "nextcare"
+},
+
+{
+    name: "RN",
+    file: "NEXTCARE - RN.xlsx",
+    tpa: "nextcare"
+},
+
+{
+    name: "RN2",
+    file: "NEXTCARE - RN2.xlsx",
+    tpa: "nextcare"
+},
+
+{
+    name: "RN3",
+    file: "NEXTCARE - RN3.xlsx",
+    tpa: "nextcare"
+},
+
+{
+    name: "PCP - RN3",
+    file: "NEXTCARE - PCP -RN3.xlsx",
+    tpa: "nextcare"
+},
+
+{
+    name: "PCP - AUH",
+    file: "NEXTCARE - PCP-AUH.xlsx",
+    tpa: "nextcare"
+}
+    // =================================================
+    // NAS NEURON NETWORKS
+    // =================================================
+
     {
-        name: "GN PLUS",
-        file: "GN-PLUS.xlsx"
+        name: "Comprehensive Network",
+        file: "NAS - Comprehensive Network.xlsx",
+        tpa: "nas-neuron"
     },
 
     {
-        name: "GN",
-        file: "GN.xlsx"
+        name: "General Network",
+        file: "NAS - General Network.xlsx",
+        tpa: "nas-neuron"
     },
 
     {
-        name: "RNE",
-        file: "RNE.xlsx"
+        name: "Value Network",
+        file: "NAS - Value Network.xlsx",
+        tpa: "nas-neuron"
     },
 
     {
-        name: "RN",
-        file: "RN.xlsx"
+        name: "Value Lite Network",
+        file: "NAS - Value Lite Network.xlsx",
+        tpa: "nas-neuron"
     },
 
     {
-        name: "RN2",
-        file: "RN2.xlsx"
+        name: "Restricted Network",
+        file: "NAS - Restricted Network.xlsx",
+        tpa: "nas-neuron"
     },
 
     {
-        name: "RN3",
-        file: "RN3.xlsx"
+        name: "Super-Restricted Network",
+        file: "NAS - Super-Restricted Network.xlsx",
+        tpa: "nas-neuron"
     },
 
     {
-        name: "PCP",
-        file: "PCP.xlsx"
+        name: "Workers Network",
+        file: "NAS - Workers Network.xlsx",
+        tpa: "nas-neuron"
     },
 
     {
-        name: "PCP-C",
-        file: "PCP-C.xlsx"
-    },
-
-    {
-        name: "PCP-AUH",
-        file: "PCP-AUH.xlsx"
-    },
-
-    {
-        name: "PCP DENTAL",
-        file: "PCP-DENTAL.xlsx"
-    },
-
-    {
-        name: "SEHA PROVIDERS",
-        file: "SEHA-PROVIDERS.xlsx"
-    },
-
-    {
-        name: "TPA-PHM",
-        file: "TPA-PHM.xlsx"
-    },
-
-    {
-        name: "REGIONAL",
-        file: "REGIONAL.xlsx"
-    },
-
-    {
-        name: "ADNIC NETWORK ONLY",
-        file: "ADNIC-NETWORK-ONLY.xlsx"
+        name: "Workers Lite Network",
+        file: "NAS - Workers Lite Network.xlsx",
+        tpa: "nas-neuron"
     }
 
 ];
+// =====================================================
+// AAFIYA NETWORKS
+// =====================================================
+
+{
+    name: "APN Edge",
+    file: "AAFIYA - APN EDGE.xlsx",
+    tpa: "aafiya"
+},
+
+{
+    name: "APN Plus",
+    file: "AAFIYA - APN PLUS.xlsx",
+    tpa: "aafiya"
+},
+
+{
+    name: "APN",
+    file: "AAFIYA - APN.xlsx",
+    tpa: "aafiya"
+},
+
+{
+    name: "Diamond",
+    file: "AAFIYA - DIAMOND.xlsx",
+    tpa: "aafiya"
+},
+
+{
+    name: "Elite",
+    file: "AAFIYA - ELITE.xlsx",
+    tpa: "aafiya"
+},
+
+{
+    name: "Essential",
+    file: "AAFIYA - ESSENTIAL.xlsx",
+    tpa: "aafiya"
+},
+
+{
+    name: "Gold",
+    file: "AAFIYA - GOLD.xlsx",
+    tpa: "aafiya"
+}
+// =====================================================
+// AL MADALLAH NETWORKS
+// =====================================================
+
+{
+    name: "AM Access (RN4)",
+    file: "AM-Access (RN4).xlsx",
+    tpa: "al-madallah"
+},
+
+{
+    name: "AM Choice",
+    file: "AM-Choice.xlsx",
+    tpa: "al-madallah"
+},
+
+{
+    name: "AM Elite",
+    file: "AM-Elite.xlsx",
+    tpa: "al-madallah"
+},
+
+{
+    name: "AM Neo",
+    file: "AM-Neo.xlsx",
+    tpa: "al-madallah"
+},
+
+{
+    name: "AM Premier",
+    file: "AM-Premier.xlsx",
+    tpa: "al-madallah"
+},
+
+{
+    name: "AM Select (RN3)",
+    file: "AM-Select (RN3).xlsx",
+    tpa: "al-madallah"
+}
+// =====================================================
+// E-CARE NETWORKS
+// =====================================================
+
+{
+    name: "Blue",
+    file: "Ecare - Blue .xlsx",
+    tpa: "e-care"
+},
+
+{
+    name: "Blue North Care NE",
+    file: "Ecare - Blue North Care NE.xlsx",
+    tpa: "e-care"
+},
+
+{
+    name: "Classic",
+    file: "Ecare - Classic.xlsx",
+    tpa: "e-care"
+},
+
+{
+    name: "Green",
+    file: "Ecare - Green.xlsx",
+    tpa: "e-care"
+}
+// =====================================================
+// MEDNET UAE NETWORKS
+// =====================================================
+
+{
+    name: "Emerald",
+    file: "MEDNET - EMERALD.xlsx",
+    tpa: "mednet-uae"
+},
+
+{
+    name: "Gold",
+    file: "MEDNET - GOLD.xlsx",
+    tpa: "mednet-uae"
+},
+
+{
+    name: "Green",
+    file: "MEDNET - GREEN.xlsx",
+    tpa: "mednet-uae"
+},
+
+{
+    name: "Pearl",
+    file: "MEDNET - PEARL.xlsx",
+    tpa: "mednet-uae"
+},
+
+{
+    name: "Silk Road",
+    file: "MEDNET - SILK ROAD.xlsx",
+    tpa: "mednet-uae"
+},
+
+{
+    name: "Silver Classic",
+    file: "MEDNET - SILVER CLASSIC.xlsx",
+    tpa: "mednet-uae"
+},
+
+{
+    name: "Silver Premium",
+    file: "MEDNET - SILVER PREMIUM.xlsx",
+    tpa: "mednet-uae"
+},
+
+{
+    name: "International Network List",
+    file: "MEDNET - INTERNATIONAL NETWORK LIST.xlsx",
+    tpa: "mednet-uae"
+}
 
 
 // =====================================================
@@ -545,14 +747,27 @@ function renderTpas(search = "") {
             "click",
             function () {
 
-                selectedTpa =
-                    tpa;
+               selectedTpa = tpa;
 
 
-                tpaButton
-                    .querySelector("span")
-                    .textContent =
-                    tpa.name;
+// Reset previously selected network
+selectedNetwork = null;
+
+
+networkButton
+    .querySelector("span")
+    .textContent =
+    "Select Network";
+
+
+tpaButton
+    .querySelector("span")
+    .textContent =
+    tpa.name;
+
+
+// Reload network list for selected TPA
+renderNetworks("");
 
 
                 tpaDropdown
@@ -573,6 +788,7 @@ function renderTpas(search = "") {
 }
 
 
+
 // =====================================================
 // RENDER NETWORKS
 // =====================================================
@@ -582,14 +798,37 @@ function renderNetworks(search = "") {
     networkOptions.innerHTML = "";
 
 
-    const filtered =
-        networks.filter(network =>
+    // No TPA selected
+    if (!selectedTpa) {
 
+        networkOptions.innerHTML = `
+
+            <div class="no-results">
+                Select a TPA first
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    const filtered = networks.filter(network => {
+
+        const belongsToTpa =
+            network.tpa === selectedTpa.value;
+
+
+        const matchesSearch =
             network.name
                 .toLowerCase()
-                .includes(search.toLowerCase())
+                .includes(search.toLowerCase());
 
-        );
+
+        return belongsToTpa && matchesSearch;
+
+    });
 
 
     if (filtered.length === 0) {
@@ -597,7 +836,7 @@ function renderNetworks(search = "") {
         networkOptions.innerHTML = `
 
             <div class="no-results">
-                No network found
+                No network found for this TPA
             </div>
 
         `;
@@ -661,7 +900,6 @@ function renderNetworks(search = "") {
     });
 
 }
-
 
 // =====================================================
 // SEARCH EVENTS
