@@ -81,7 +81,7 @@ const tpas = [
     {
         name: "E-Care",
         value: "e-care"
-    }
+    },
     {
     name: "Al Madallah Healthcare Management",
     value: "al-madallah"
@@ -148,7 +148,7 @@ const networks = [
     name: "PCP - AUH",
     file: "NEXTCARE - PCP-AUH.xlsx",
     tpa: "nextcare"
-}
+},
     // =================================================
     // NAS NEURON NETWORKS
     // =================================================
@@ -199,9 +199,9 @@ const networks = [
         name: "Workers Lite Network",
         file: "NAS - Workers Lite Network.xlsx",
         tpa: "nas-neuron"
-    }
+    },
 
-];
+
 // =====================================================
 // AAFIYA NETWORKS
 // =====================================================
@@ -246,7 +246,7 @@ const networks = [
     name: "Gold",
     file: "AAFIYA - GOLD.xlsx",
     tpa: "aafiya"
-}
+},
 // =====================================================
 // AL MADALLAH NETWORKS
 // =====================================================
@@ -285,7 +285,7 @@ const networks = [
     name: "AM Select (RN3)",
     file: "AM-Select (RN3).xlsx",
     tpa: "al-madallah"
-}
+},
 // =====================================================
 // E-CARE NETWORKS
 // =====================================================
@@ -312,7 +312,7 @@ const networks = [
     name: "Green",
     file: "Ecare - Green.xlsx",
     tpa: "e-care"
-}
+},
 // =====================================================
 // MEDNET UAE NETWORKS
 // =====================================================
@@ -364,6 +364,7 @@ const networks = [
     file: "MEDNET - INTERNATIONAL NETWORK LIST.xlsx",
     tpa: "mednet-uae"
 }
+    ];
 
 
 // =====================================================
