@@ -240,7 +240,9 @@ const insuranceCompanies = [
     }
 
 ];
-insuranceCompanies.sort();
+insuranceCompanies.sort((a, b) =>
+    a.name.localeCompare(b.name)
+);
 
 // =====================================================
 // TPA DATA
@@ -283,7 +285,9 @@ const tpas = [
 }
 
 ];
- tpas.sort();
+ tpas.sort((a, b) =>
+    a.name.localeCompare(b.name)
+);
 
 
 
