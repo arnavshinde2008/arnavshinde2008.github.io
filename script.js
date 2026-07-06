@@ -507,6 +507,17 @@ const networks = [
     file: "Ecare - Green.xlsx",
     tpa: "e-care"
 },
+{
+    name: "Gold",
+    file: "Gold.xlsx",
+    tpa: "e-care"
+},
+
+{
+    name: "Silver",
+    file: "Silver.xlsx",
+    tpa: "e-care"
+},
 // =====================================================
 // MEDNET UAE NETWORKS
 // =====================================================
